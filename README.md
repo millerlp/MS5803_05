@@ -39,13 +39,13 @@ In the setup loop, initialize the sensor as follows:
 	sensor.initializeMS_5803(true) 
 ```
 
-Other useful commands (all return float values):
+Other useful commands:
 ```
 
 	readSensor() // Get temperature and pressure from sensor
 
-	temperature() // Get temperature in Celsius (native units)
+	temperature() // Get temperature in Celsius (returns a float value)
 	
-	pressure() // Get pressure in mbar (native units)
+	pressure() // Get pressure in mbar (returns a float value)
 ```
 
