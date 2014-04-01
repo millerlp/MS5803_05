@@ -220,7 +220,6 @@ void MS_5803::readSensor() {
 	// For 5 bar sensor
 	mbarInt = ((D1 * Sensitivity) / 2097152 - Offset) / 32768;
 	mbar = (float)mbarInt / 100;
-	break;
     
     
     // Start other temperature conversions by converting mbar to psi absolute
