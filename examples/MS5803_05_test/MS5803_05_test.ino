@@ -29,7 +29,7 @@ MS_5803 sensor = MS_5803(512);
 
 void setup() {
   // Start the serial ports.
-  Serial.begin(115200); // other values include 9600, 14400, 57600 etc.
+  Serial.begin(9600); // other values include 9600, 14400, 57600 etc.
   delay(2000);
   // Initialize the MS5803 sensor. This will report the
   // conversion coefficients to the Serial terminal if present.
@@ -63,7 +63,7 @@ void loop() {
   Serial.print(sensor.temperature());
   Serial.println("C");
 
-  delay(3000); // For readability
+  delay(1000); // For readability
 }
 
 
