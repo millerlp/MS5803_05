@@ -48,10 +48,10 @@ In the setup loop, initialize the sensor as follows:
 Other useful commands:
 ```
 
-	readSensor() // Get temperature and pressure from sensor
+	sensor.readSensor() // Get temperature and pressure from sensor
 
-	temperature() // Get temperature in Celsius (returns a float value)
+	sensor.temperature() // Get temperature in Celsius (returns a float value)
 	
-	pressure() // Get pressure in mbar (returns a float value)
+	sensor.pressure() // Get pressure in mbar (returns a float value)
 ```
 
