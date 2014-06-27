@@ -180,7 +180,7 @@ void MS_5803::readSensor() {
     if (TEMP < 2000) {
 		// For 5 bar model
 		// If temperature is below 20.0C
-		T2 = 3 * ((uint64_t)dT * dT)  / POW_2_33 ; // 2^33 = 8589934592
+		T2 = 3 * ((int64_t)dT * dT)  / POW_2_33 ; // 2^33 = 8589934592
 		T2 = (int32_t)T2; // recast as signed 32bit integer
 		OFF2 = 3 * ((TEMP-2000) * (TEMP-2000)) / 8 ;
 		Sens2 = 7 * ((TEMP-2000) * (TEMP-2000)) / 8 ;
@@ -191,11 +191,11 @@ void MS_5803::readSensor() {
 		Sens2 = 0;
     }
     // Additional compensation for very low temperatures (< -15C)
-    if (TEMP < -1500) {
-		// For 5 bar sensor
-		// Leave OFF2 alone in this case
-		Sens2 = Sens2 + 3 * ((TEMP+1500)*(TEMP+1500));
-    }
+//    if (TEMP < -1500) {
+//		// For 5 bar sensor
+//		// Leave OFF2 alone in this case
+//		Sens2 = Sens2 + 3 * ((TEMP+1500)*(TEMP+1500));
+//    }
     
     // Calculate initial Offset and Sensitivity
     // Notice lots of casts to uint32_t and int64_t to ensure that the 
